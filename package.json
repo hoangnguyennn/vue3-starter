@@ -11,9 +11,11 @@
     "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
-    "vue": "3.2.45"
+    "vue": "3.2.45",
+    "vue-router": "4"
   },
   "devDependencies": {
+    "@types/node": "18.14.4",
     "@typescript-eslint/eslint-plugin": "5.54.0",
     "@vitejs/plugin-vue": "4.0.0",
     "eslint": "8.35.0",
