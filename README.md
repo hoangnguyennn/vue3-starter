@@ -30,3 +30,4 @@ $ pnpm lint:fix # fix eslint errors
 - Axios
 - Multi languages
 - TypeScript
+- SCSS

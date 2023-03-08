@@ -3,6 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useAppStore } from '@hn/store/appStore'
 import { ElNotification } from 'element-plus'
+import exampleImage from '@hn/assets/images/example.png'
 
 const appStore = useAppStore()
 const { language } = storeToRefs(appStore)
@@ -38,5 +39,7 @@ const showNotification = () => {
     <el-button type="primary" @click="showNotification">
       Show notification
     </el-button>
+
+    <img :src="exampleImage" />
   </div>
 </template>
