@@ -23,3 +23,10 @@ $ pnpm lint:fix # fix eslint errors
 ```
 
 ### Features
+
+- Routing
+- Layouts, pages and components
+- Pinia store
+- Axios
+- Multi languages
+- TypeScript
