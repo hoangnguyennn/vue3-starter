@@ -3,9 +3,9 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import DefaultLayout from '@hn/layouts/DefaultLayout.vue'
 import BlankLayout from '@hn/layouts/BlankLayout.vue'
 
-import HomePage from '@hn/pages/HomePage.vue'
-import AboutPage from '@hn/pages/AboutPage.vue'
-import ContactPage from '@hn/pages/ContactPage.vue'
+const HomePage = () => import('@hn/pages/HomePage.vue')
+const AboutPage = () => import('@hn/pages/AboutPage.vue')
+const ContactPage = () => import('@hn/pages/ContactPage.vue')
 
 const routes: RouteRecordRaw[] = [
   {
