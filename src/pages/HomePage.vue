@@ -2,7 +2,6 @@
 import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useAppStore } from '@hn/store/appStore'
-import { ElNotification } from 'element-plus'
 import exampleImage from '@hn/assets/images/example.png'
 
 const appStore = useAppStore()
@@ -18,14 +17,6 @@ const changeLanguage = () => {
     appStore.setLanguage('en')
   }
 }
-
-const showNotification = () => {
-  ElNotification({
-    type: 'error',
-    message: 'hello',
-    position: 'bottom-left'
-  })
-}
 </script>
 
 <template>
@@ -35,10 +26,6 @@ const showNotification = () => {
     <button @click="changeLanguage">Change language</button>
 
     <p>{{ t('hello') }}</p>
-
-    <el-button type="primary" @click="showNotification">
-      Show notification
-    </el-button>
 
     <img :src="exampleImage" />
   </div>
