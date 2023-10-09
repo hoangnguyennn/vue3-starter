@@ -1,15 +1,21 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { reactive, toRefs } from 'vue'
+
+type AuthStoreType = {
+  token: Types.Nullable<string>
+}
 
 export const useAuthStore = defineStore('authStore', () => {
-  const token = ref<Types.Nullable<string>>(null)
+  const state = reactive<AuthStoreType>({
+    token: null
+  })
 
   const setToken = (value: Types.Nullable<string>) => {
-    token.value = value
+    state.token = value
   }
 
   return {
-    token,
+    ...toRefs(state),
     setToken
   }
 })

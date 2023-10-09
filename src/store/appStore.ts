@@ -1,18 +1,26 @@
-import GenerateUtil from '@hn/utils/generate.util'
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { reactive, toRefs } from 'vue'
+import GenerateUtil from '@hn/utils/generate.util'
+
+type AppStoreType = {
+  isLoading: boolean
+  language: 'en' | 'vi'
+  snackbars: Types.ISnackbar[]
+}
 
 export const useAppStore = defineStore('appStore', () => {
-  const isLoading = ref(false)
-  const language = ref('en')
-  const snackbars = ref<Types.ISnackbar[]>([])
+  const state = reactive<AppStoreType>({
+    isLoading: false,
+    language: 'en',
+    snackbars: []
+  })
 
   const setIsLoading = (value: boolean) => {
-    isLoading.value = value
+    state.isLoading = value
   }
 
-  const setLanguage = (value: string) => {
-    language.value = value
+  const setLanguage = (value: AppStoreType['language']) => {
+    state.language = value
   }
 
   const addSnackbar = (snackbar: Types.ISnackbarOption | string) => {
@@ -22,24 +30,23 @@ export const useAppStore = defineStore('appStore', () => {
         id: GenerateUtil.generateId()
       }
 
-      snackbars.value.push(newSnackbar)
+      state.snackbars.push(newSnackbar)
     } else {
       const newSnackbar: Types.ISnackbar = {
         id: GenerateUtil.generateId(),
         message: snackbar
       }
 
-      snackbars.value.push(newSnackbar)
+      state.snackbars.push(newSnackbar)
     }
   }
 
   const removeSnackbar = (id: string) => {
-    snackbars.value = snackbars.value.filter(snackbar => snackbar.id !== id)
+    state.snackbars = state.snackbars.filter(snackbar => snackbar.id !== id)
   }
 
   return {
-    isLoading,
-    language,
+    ...toRefs(state),
     setIsLoading,
     setLanguage,
     addSnackbar,
