@@ -5,7 +5,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import DefaultLayout from './layouts/DefaultLayout.vue'
+import DefaultLayout from '@hn/layouts/DefaultLayout.vue'
 
 const route = useRoute()
 

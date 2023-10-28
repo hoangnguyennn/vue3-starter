@@ -1,0 +1,63 @@
+.hn-input {
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    margin-bottom: 4px;
+  }
+
+  .input {
+    padding: 12px;
+    font-size: $font-size-base;
+    color: $color-black;
+    border: 1px solid $color-gray;
+
+    &:focus {
+      border-color: $color-primary;
+    }
+  }
+
+  .input-footer {
+    margin-top: 4px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .error-message {
+      font-size: $font-size-sm;
+      color: $color-danger;
+      word-break: break-all;
+    }
+
+    .count {
+      min-width: 60px;
+      color: $color-gray;
+      text-align: right;
+    }
+  }
+
+  &.error {
+    .input,
+    .input:focus {
+      border-color: $color-danger;
+    }
+
+    .input-footer {
+      justify-content: space-between;
+    }
+  }
+
+  &.disabled {
+    .input,
+    .input:focus {
+      background-color: $color-disabled;
+      border-color: $color-disabled;
+    }
+
+    .input-footer {
+      .error-message {
+        color: $color-gray;
+      }
+    }
+  }
+}
