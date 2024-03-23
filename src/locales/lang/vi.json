@@ -1,3 +1,6 @@
 {
-  "hello": "Xin chào"
+  "hello": "Xin chào",
+  "message": {
+    "leave_alert": "Bạn có muốn rời khỏi trang?"
+  }
 }

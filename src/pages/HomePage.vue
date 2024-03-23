@@ -3,10 +3,12 @@ import { storeToRefs } from 'pinia'
 import { useI18n } from 'vue-i18n'
 import { useAppStore } from '@hn/store/appStore'
 import exampleImage from '@hn/assets/images/example.png'
+import useBeforeRouteLeaveConfirmation from '@hn/composables/useBeforeRouteLeaveConfirmation'
 
 const appStore = useAppStore()
 const { language } = storeToRefs(appStore)
 const { locale, t } = useI18n()
+const { enable, disable } = useBeforeRouteLeaveConfirmation()
 
 const changeLanguage = () => {
   if (language.value === 'en') {
@@ -28,5 +30,8 @@ const changeLanguage = () => {
     <p>{{ t('hello') }}</p>
 
     <img :src="exampleImage" />
+
+    <button @click="enable">Enable</button>
+    <button @click="disable">Disable</button>
   </div>
 </template>
