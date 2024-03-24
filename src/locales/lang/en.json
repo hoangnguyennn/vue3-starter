@@ -2,5 +2,9 @@
   "hello": "Hello",
   "message": {
     "leave_alert": "Do you want to leave the page?"
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "user": "User"
   }
 }
