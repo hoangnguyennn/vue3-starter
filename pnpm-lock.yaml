@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@vee-validate/i18n':
+    specifier: 4.12.6
+    version: 4.12.6
+  '@vee-validate/rules':
+    specifier: 4.12.6
+    version: 4.12.6(vue@3.4.5)
   axios:
     specifier: 1.6.5
     version: 1.6.5
@@ -17,6 +23,9 @@ dependencies:
   uuid:
     specifier: 9.0.1
     version: 9.0.1
+  vee-validate:
+    specifier: 4.12.6
+    version: 4.12.6(vue@3.4.5)
   vue:
     specifier: 3.4.5
     version: 3.4.5(typescript@5.3.3)
@@ -695,6 +704,18 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
+  /@vee-validate/i18n@4.12.6:
+    resolution: {integrity: sha512-K3xbjLIQQwDrllS18Ka5nyQDIF/1FuHnedXTr6bfmTm44/7C4MyMGo9KDahnrMWTcFkYIKR7XMshM3R6o54MFg==}
+    dev: false
+
+  /@vee-validate/rules@4.12.6(vue@3.4.5):
+    resolution: {integrity: sha512-vXhunbllildEbCWaBI2m6mij7U4pDTeoqX9CQ7/0gVMhtkTZh+QhKsDSaGI2evatECINH2cpLOBaMkubdN82VQ==}
+    dependencies:
+      vee-validate: 4.12.6(vue@3.4.5)
+    transitivePeerDependencies:
+      - vue
+    dev: false
+
   /@vitejs/plugin-vue@5.0.2(vite@5.0.11)(vue@3.4.5):
     resolution: {integrity: sha512-kEjJHrLb5ePBvjD0SPZwJlw1QTRcjjCA9sB5VyfonoXVBxTS7TMnqL6EkLt1Eu61RDeiuZ/WN9Hf6PxXhPI2uA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -761,6 +782,10 @@ packages:
 
   /@vue/devtools-api@6.5.0:
     resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
+    dev: false
+
+  /@vue/devtools-api@6.6.1:
+    resolution: {integrity: sha512-LgPscpE3Vs0x96PzSSB4IGVSZXZBZHpfxs+ZA1d+VEPwHdOXowy/Y2CsvCAIFrf+ssVU1pD1jidj505EpUnfbA==}
     dev: false
 
   /@vue/language-core@1.8.27(typescript@5.3.3):
@@ -1937,6 +1962,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /type-fest@4.14.0:
+    resolution: {integrity: sha512-on5/Cw89wwqGZQu+yWO0gGMGu8VNxsaW9SB2HE8yJjllEk7IDTwnSN1dUVldYILhYPN5HzD7WAaw2cc/jBfn0Q==}
+    engines: {node: '>=16'}
+    dev: false
+
   /typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
@@ -1959,6 +1989,16 @@ packages:
   /uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
+    dev: false
+
+  /vee-validate@4.12.6(vue@3.4.5):
+    resolution: {integrity: sha512-EKM3YHy8t1miPh30d5X6xOrfG/Ctq0nbN4eMpCK7ezvI6T98/S66vswP+ihL4QqAK/k5KqreWOxof09+JG7N/A==}
+    peerDependencies:
+      vue: ^3.3.11
+    dependencies:
+      '@vue/devtools-api': 6.6.1
+      type-fest: 4.14.0
+      vue: 3.4.5(typescript@5.3.3)
     dev: false
 
   /vite@5.0.11(@types/node@20.10.6)(sass@1.69.7):
