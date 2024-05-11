@@ -1,10 +1,7 @@
-import { ref } from 'vue'
-
-const id = ref(0)
+import { v4 as uuidV4 } from 'uuid'
 
 const useId = () => {
-  id.value++
-  return id.value
+  return uuidV4()
 }
 
 export default useId
