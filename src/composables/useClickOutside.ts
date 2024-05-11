@@ -14,10 +14,8 @@ const useClickOutside = (
 
     if (!element) return
 
-    const isClickElement = element === event.target
-    const isClickChildElement = element.contains(event.target as Node)
-
-    if (isClickElement || isClickChildElement) {
+    const isElementClicked = element === event.target
+    if (!isElementClicked) {
       callback(event)
     }
   }
