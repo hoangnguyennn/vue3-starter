@@ -19,12 +19,9 @@ const useBeforeRouteLeaveConfirmation = () => {
 
   /**
    * Hàm xử lý xác nhận rời khỏi trang
-   * @param event
-   * @returns {boolean} Có rời khỏi trang hay không
    */
   const prevent = (event: BeforeUnloadEvent) => {
     event.preventDefault()
-    event.returnValue = state.customMessage || message.value
   }
 
   const changeMessage = (newMessage: string) => {
