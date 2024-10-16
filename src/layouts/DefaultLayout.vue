@@ -31,8 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, computed } from 'vue'
-import { mdiMenuOpen, mdiMenuClose } from '@mdi/js'
+import { mdiMenuClose, mdiMenuOpen } from '@mdi/js'
+import { computed, reactive } from 'vue'
 
 import TheMenu from '@hn/components/layouts/TheMenu.vue'
 

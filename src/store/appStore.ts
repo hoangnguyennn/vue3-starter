@@ -1,6 +1,6 @@
+import GenerateUtil from '@hn/utils/generate.util'
 import { defineStore } from 'pinia'
 import { reactive, toRefs } from 'vue'
-import GenerateUtil from '@hn/utils/generate.util'
 
 type AppStoreType = {
   isLoading: boolean

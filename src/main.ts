@@ -1,14 +1,14 @@
 import { createApp } from 'vue'
 
-import vuetify from '@hn/plugins/vuetify'
 import '@hn/plugins/vee-validate'
+import vuetify from '@hn/plugins/vuetify'
 
 import '@hn/assets/styles/main.scss'
 
-import App from './App.vue'
 import i18n from '@hn/locales'
 import router from '@hn/router'
 import pinia from '@hn/store'
+import App from './App.vue'
 
 const app = createApp(App)
 

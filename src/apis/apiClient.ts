@@ -1,8 +1,8 @@
-import axios, { AxiosError, AxiosResponse } from 'axios'
 import { API_BASE_URL } from '@hn/constants'
-import { BAD_REQUEST_MESSAGE, OFFLINE_MESSAGE } from './apiErrors'
 import { useAuthStore } from '@hn/store/authStore'
 import ApiUtil from '@hn/utils/api.util'
+import axios, { AxiosError, AxiosResponse } from 'axios'
+import { BAD_REQUEST_MESSAGE, OFFLINE_MESSAGE } from './apiErrors'
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL

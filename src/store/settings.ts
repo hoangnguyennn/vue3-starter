@@ -1,6 +1,6 @@
-import { reactive, watch } from 'vue'
-import { defineStore } from 'pinia'
 import { setLocale } from '@vee-validate/i18n'
+import { defineStore } from 'pinia'
+import { reactive, watch } from 'vue'
 
 const useSettingsStore = defineStore('settings', () => {
   const state = reactive({

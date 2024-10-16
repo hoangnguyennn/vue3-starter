@@ -11,8 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue'
 import { useForm } from 'vee-validate'
+import { watch } from 'vue'
 
 import useSettings from '@hn/store/settings'
 

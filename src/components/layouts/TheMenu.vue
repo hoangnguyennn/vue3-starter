@@ -12,9 +12,9 @@
 </template>
 
 <script setup lang="ts">
+import { mdiAccountGroup, mdiViewDashboard } from '@mdi/js'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { mdiViewDashboard, mdiAccountGroup } from '@mdi/js'
 import { RouteLocationRaw } from 'vue-router'
 
 interface MenuItem {
